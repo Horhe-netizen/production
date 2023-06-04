@@ -1,0 +1,23 @@
+.header {
+  width: 100%;
+  height: var(--header-height);
+  
+  padding: 0 30px;
+  background-color: var(--bg-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__page-title {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--secondary-color);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}

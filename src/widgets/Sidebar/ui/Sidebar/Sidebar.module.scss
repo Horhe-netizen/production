@@ -1,0 +1,44 @@
+.sidebar {
+  height: 100vh;
+  width: var(--sidebar-width);
+  
+  background: var(--bg-color);
+  border-right: solid 2px var(--primary-border-color);
+  padding: 30px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  &__logo {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  &__nav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__nav-link {
+    display: inline-block;
+    width: 100%;
+    
+    padding: 20px;
+    border-radius: 15px;
+    
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  &__bottom {
+    width: 100%;
+  }
+}

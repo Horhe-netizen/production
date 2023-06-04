@@ -1,0 +1,17 @@
+.theme-switcher {
+  padding: 10px;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  
+  &__icon {
+    fill: var(--bg-color);
+    stroke: var(--bg-color);
+  }
+}

@@ -1,0 +1,9 @@
+.app-button {
+  cursor: pointer;
+  
+  &.clear {
+    background: none;
+    border: none;
+    outline: none;
+  }
+}
