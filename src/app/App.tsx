@@ -2,7 +2,7 @@ import { AppRouter } from './providers/router'
 import { Header } from '@src/widgets/Header'
 import { Sidebar } from '@src/widgets/Sidebar'
 
-import classNames from '@src/shared/lib/classNames'
+import classNames from '@src/shared/lib/classNames/classNames'
 import { useTheme } from '@src/app/providers/ThemeProvider'
 
 import './styles/index.scss'

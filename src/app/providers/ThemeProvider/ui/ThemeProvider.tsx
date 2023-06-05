@@ -10,10 +10,6 @@ const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme ?? T
 const ThemeProvider = (props: Props) => {
   const [theme, setTheme] = useState(defaultTheme)
 
-  function toggleTheme () {
-    setTheme((prevState) => prevState === Theme.DARK ? Theme.LIGHT : Theme.DARK)
-  }
-
   const defaultProps = useMemo(() => ({
     theme,
     setTheme

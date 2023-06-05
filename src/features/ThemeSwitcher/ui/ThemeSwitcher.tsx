@@ -1,5 +1,5 @@
 import { useTheme, Theme } from '@src/app/providers/ThemeProvider'
-import classNames from '@src/shared/lib/classNames'
+import classNames from '@src/shared/lib/classNames/classNames'
 
 import SunIcon from '@src/shared/assets/icons/sun.svg'
 import MoonIcon from '@src/shared/assets/icons/moon.svg'
@@ -14,10 +14,14 @@ const ThemeSwitcher = (props: ThemeSwitcherProps) => {
 
   return (
     <button
-      className={classNames(styles['theme-switcher'], {}, [props.className])}
+      className={classNames(styles['theme-switcher'], {}, [props.className ?? ''])}
       onClick={toggleTheme}
     >
-      {theme === Theme.DARK ? <SunIcon className={styles['theme-switcher__icon']} /> : <MoonIcon className={styles['theme-switcher__icon']} />}
+      {
+        theme === Theme.DARK
+          ? <SunIcon className={styles['theme-switcher__icon']} />
+          : <MoonIcon className={styles['theme-switcher__icon']} />
+      }
     </button>
   )
 }

@@ -1,5 +1,5 @@
 import { type LinkProps, NavLink } from 'react-router-dom'
-import classNames from '@src/shared/lib/classNames'
+import classNames from '@src/shared/lib/classNames/classNames'
 import styles from './AppLink.module.scss'
 
 export enum AppLinkTheme {

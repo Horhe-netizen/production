@@ -1,5 +1,5 @@
 import { ThemeSwitcher } from '@src/features/ThemeSwitcher'
-import classNames from '@src/shared/lib/classNames'
+import classNames from '@src/shared/lib/classNames/classNames'
 import styles from './Header.module.scss'
 
 interface HeaderProps {
@@ -8,8 +8,8 @@ interface HeaderProps {
 
 const Header = ({ className }: HeaderProps) => {
   return (
-    <header className={classNames(styles.header, {}, [className])}>
-      <h1 className={styles['header__page-title']}>Statistics</h1>
+    <header className={classNames(styles.header, {}, [className ?? ''])}>
+      <h1 className={styles['header__page-title']}></h1>
       <ThemeSwitcher />
     </header>
   )
