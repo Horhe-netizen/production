@@ -1,4 +1,4 @@
-import { routeConfig } from '@src/shared/config/routeConfig/routeConfig'
+import { routeConfig } from '../lib/routeConfig'
 import { Route, Routes } from 'react-router-dom'
 import { Suspense } from 'react'
 import { useTranslation } from 'react-i18next'

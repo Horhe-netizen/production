@@ -6,6 +6,9 @@ export default function buildDevServer (options: BuildOptions): DevServerConfigu
     port: options.port,
     open: true,
     historyApiFallback: true,
-    hot: true
+    hot: true,
+    client: {
+      overlay: false
+    }
   }
 }

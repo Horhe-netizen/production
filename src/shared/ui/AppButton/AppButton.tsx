@@ -9,7 +9,7 @@ export enum AppButtonTheme {
 interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode
   className?: string
-  theme: AppButtonTheme
+  theme?: AppButtonTheme
 };
 
 const AppButton = (props: AppButtonProps) => {
@@ -17,7 +17,11 @@ const AppButton = (props: AppButtonProps) => {
 
   return (
     <button
-      className={classNames(styles['app-button'], {}, [className ?? '', styles[theme]])}
+      className={
+        classNames(styles['app-button'],
+          {},
+          [className ?? '', styles[theme ?? AppButtonTheme.CLEAR]])
+      }
       {...buttonProps}
     >
       {children}

@@ -32,7 +32,8 @@ module.exports = {
       'error',
       { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow-as-parameter' }
     ],
-    'max-len': ['error', { code: 100, ignoreComments: true }]
+    'max-len': ['error', { code: 100, ignoreComments: true }],
+    '@typescript-eslint/no-non-null-assertion': 'off'
   },
   globals: {
     __IS_DEV__: true

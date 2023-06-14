@@ -6,7 +6,7 @@ import classNames from '@src/shared/lib/classNames/classNames'
 import { useTheme } from '@src/app/providers/ThemeProvider'
 
 import './styles/index.scss'
-import { Suspense } from 'react'
+import { Suspense, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
 const Component = () => {
@@ -26,6 +26,8 @@ const Component = () => {
 
 const App = () => {
   const { theme, toggleTheme } = useTheme()
+
+  throw new Error()
 
   return (
     <div className={classNames('app', {}, [theme])}>
