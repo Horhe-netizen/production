@@ -1,21 +1,21 @@
-import {AppRouter} from "./providers/router";
-import {Header} from "@src/widgets/Header";
-import {Sidebar} from "@src/widgets/Sidebar";
+import { AppRouter } from './providers/router'
+import { Header } from '@src/widgets/Header'
+import { Sidebar } from '@src/widgets/Sidebar'
 
-import classNames from "@src/shared/lib/classNames";
-import {useTheme} from "@src/app/providers/ThemeProvider";
+import classNames from '@src/shared/lib/classNames/classNames'
+import { useTheme } from '@src/app/providers/ThemeProvider'
 
-import './styles/index.scss';
-import {Suspense} from "react";
-import { useTranslation } from 'react-i18next';
+import './styles/index.scss'
+import { Suspense } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const Component = () => {
-  const {t, i18n} = useTranslation();
-  
-  function toggle() {
-    i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
+  const { t, i18n } = useTranslation()
+
+  function toggle () {
+    void i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
   }
-  
+
   return (
     <div>
       <button onClick={toggle}>{t('Translate')}</button>
@@ -25,7 +25,7 @@ const Component = () => {
 }
 
 const App = () => {
-  const {theme, toggleTheme} = useTheme();
+  const { theme, toggleTheme } = useTheme()
 
   return (
     <div className={classNames('app', {}, [theme])}>
@@ -43,4 +43,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default App

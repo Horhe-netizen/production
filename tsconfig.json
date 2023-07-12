@@ -2,6 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "noImplicitAny": true,
+    "strictNullChecks": true,
     "module": "ESNext",
     "target": "es5",
     "jsx": "react-jsx",
@@ -13,8 +14,14 @@
     "baseUrl": ".",
     "paths": {
       "@src*": ["./src*"]
-    }
+    },
   },
+  "include": [
+    ".eslintrc.js",
+    "src/**/*",
+    "config/**/*",
+    "*.config.*"
+  ],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
